@@ -1,0 +1,18 @@
+{
+  "builds": [
+    {
+      "src": "api/main.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/image.png",
+      "destination": "api/main.py"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "api/main.py"
+    }
+  ]
+}
